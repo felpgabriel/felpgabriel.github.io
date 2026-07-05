@@ -138,20 +138,43 @@
     .postcard-image {
       width: 100%;
       height: 100%;
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      gap: 0.25rem;
+      overflow: hidden;
+      padding: 0.35rem;
+      background: #fff7fa;
+      position: relative;
+    }
+
+    .postcard-image .mini-photo {
+      position: absolute;
+      left: 0.55rem;
+      top: 0.55rem;
+      width: 84px;
+      height: 84px;
+      object-fit: contain;
+      z-index: 2;
+    }
+
+    .postcard-image img {
+      width: 100%;
+      height: 100%;
+      max-height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 10px;
       overflow: hidden;
     }
 
-    .postcard img {
-      width: 100%;
-      object-fit: contain;
-      display: block;
+    .postcard-image img:last-child {
+      background-color: #6a0271;
     }
 
     .postcard .text {
       padding: 1.1rem;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       gap: 0.5rem;
       background: linear-gradient(135deg, #fffafc, #fceef2);
       font-size: 1.5rem;
@@ -162,6 +185,29 @@
     .postcard .text strong {
       font-size: 2.5rem;
       color: var(--rose-strong);
+    }
+
+    .imagem-ingressos {
+      width: 100%;
+    }
+
+    .icon-row {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      margin-top: 0.4rem;
+      color: var(--rose-strong);
+    }
+
+    .icon-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.2rem;
+      height: 2.2rem;
+      border-radius: 999px;
+      background: rgba(184, 91, 116, 0.12);
+      font-size: 1.1rem;
     }
 
     .hint {
@@ -200,13 +246,19 @@
 
     <div class="postcard" id="postcard">
       <div class="postcard-image">
+        <img class="mini-photo" src="../public/21.png" alt="Imagem decorativa ao lado da primeira foto">
         <img src="../public/19.avif" alt="Paisagem de Curitiba">
         <img src="../public/20.jpg" alt="Show da Xuxa">
       </div>
       <div class="text">
+        <div class="icon-row">
+          <span class="icon-pill">✈️</span>
+          <span class="icon-pill">🏡</span>
+        </div>
         <strong>OLÁ, MINHA BAIXINHA!</strong>
         <span>VAMOS NESSA AVENTURA COMIGO?</span>
         <span>BORA ENTRAR NA ÚLTIMA NAVE?</span>
+        <img src="../public/22.png" alt="Show da Xuxa" class="imagem-ingressos">
       </div>
     </div>
 
