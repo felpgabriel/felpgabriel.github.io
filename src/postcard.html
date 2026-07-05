@@ -180,6 +180,7 @@
       font-size: 1.5rem;
       color: var(--text);
       line-height: 1.5;
+      font-weight: 600;
     }
 
     .postcard .text strong {
@@ -213,7 +214,7 @@
     .hint {
       position: absolute;
       bottom: 1.2rem;
-      font-size: 0.95rem;
+      font-size: 1.5rem;
       color: var(--rose-strong);
       letter-spacing: 0.04em;
       text-transform: uppercase;
@@ -240,7 +241,6 @@
     <div class="envelope" id="envelope">
       <div class="envelope-front">
         <div class="envelope-dobra"></div>
-        Abra o cartão
       </div>
     </div>
 
@@ -271,7 +271,6 @@
 
     envelope.addEventListener('click', () => {
       envelope.classList.add('open');
-      envelope.querySelector('.envelope-front').innerText = '';
       postcard.classList.add('show');
     });
   </script>
